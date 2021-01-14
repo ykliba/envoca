@@ -16,12 +16,14 @@ use App\Http\Controllers\RegistarController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['middleware' => ['auth:sunctum']], function () {
+    Route::get('user', function (Request $request) {
+        return response()->json(['user' => $request->user()]);
+    });
+    Route::post('/logout', [LoginController::class, 'logout']);
 });
 
 
 Route::post('/login', [LoginController::class, 'login']);
-Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::post('/registar', [RegistarController::class, 'registar']);
