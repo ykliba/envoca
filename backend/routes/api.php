@@ -2,8 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\RegistarController;
+use App\Http\Controllers\Auth\Api\LoginController;
+use App\Http\Controllers\Auth\Api\RegistarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,5 +25,4 @@ Route::group(['middleware' => ['auth:sunctum']], function () {
 
 
 Route::post('/login', [LoginController::class, 'login']);
-
 Route::post('/registar', [RegistarController::class, 'registar']);
