@@ -76,7 +76,9 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')
+           <div id="app">
+               
+           </div>
         </main>
     </div>
 </body>

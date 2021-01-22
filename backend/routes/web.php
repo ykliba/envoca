@@ -21,4 +21,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/{any?}', fn() => view('index'))->where('any', '.+');
+Route::get('/{any?}', fn() => view('layouts.app'))->where('any', '.+');
