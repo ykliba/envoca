@@ -1,3 +1,8 @@
+// import Vue from 'vue'
+// ルーティングの定義をインポートする
+// import router from './router'
+// ルートコンポーネントをインポートする
+// import App from './App.vue'
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -7,6 +12,7 @@
 require('./bootstrap');
 
 window.Vue = require('vue').default;
+
 
 /**
  * The following block of code may be used to automatically register your
@@ -29,4 +35,5 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
-});
+    template: '<h1>Hello world</h1>'
+})

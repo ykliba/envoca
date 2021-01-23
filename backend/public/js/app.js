@@ -1875,6 +1875,12 @@ __webpack_require__.r(__webpack_exports__);
   \*****************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
+// import Vue from 'vue'
+// ルーティングの定義をインポートする
+// import router from './router'
+// ルートコンポーネントをインポートする
+// import App from './App.vue'
+
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -1901,7 +1907,8 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
  */
 
 var app = new Vue({
-  el: '#app'
+  el: '#app',
+  template: '<h1>Hello world</h1>'
 });
 
 /***/ }),
