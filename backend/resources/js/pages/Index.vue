@@ -1,3 +1,5 @@
 <template>
-  <h1>Index</h1>
+  <div class="py-4">
+    
+  </div>
 </template>

@@ -2,8 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Auth\Api\LoginController;
-use App\Http\Controllers\Auth\Api\RegistarController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegistarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,13 +16,9 @@ use App\Http\Controllers\Auth\Api\RegistarController;
 |
 */
 
-Route::group(['middleware' => ['auth:sunctum']], function () {
-    Route::get('user', function (Request $request) {
-        return response()->json(['user' => $request->user()]);
-    });
-    Route::post('/logout', [LoginController::class, 'logout']);
-});
 
 
-Route::post('/login', [LoginController::class, 'login']);
-Route::post('/registar', [RegistarController::class, 'registar']);
+
+Route::post('/login', [LoginController::class, 'login'])->name('login');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::post('/registar', [RegistarController::class, 'registar'])->name('register');
