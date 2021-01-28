@@ -1,3 +1,4 @@
+import './bootstrap'
 import Vue from 'vue'
 // ルーティングの定義をインポートする
 import router from './router'
@@ -6,7 +7,7 @@ import App from './App.vue'
 
 import store from './store'
 
-import './bootstrap'
+
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
