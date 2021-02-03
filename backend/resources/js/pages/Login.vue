@@ -37,7 +37,7 @@
           <button type="submit" class="button button--inverse">register</button>
         </div>
       </form>
-</div>
+    </div>
   </div>
 </template>
 
@@ -70,7 +70,7 @@ export default {
       await this.$store.dispatch('auth/register', this.registerForm)
       // トップページに移動する
       this.$router.push('/')
-    },
+    }
   }
 }
 </script>
