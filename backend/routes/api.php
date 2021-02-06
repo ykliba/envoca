@@ -21,4 +21,4 @@ use App\Http\Controllers\Auth\RegistarController;
 
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-Route::post('/registar', [RegistarController::class, 'registar'])->name('registar');
+Route::post('/register', [RegistarController::class, 'register'])->name('register');
